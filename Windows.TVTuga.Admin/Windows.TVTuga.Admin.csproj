@@ -1,0 +1,603 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49F153BD-BF38-4AB3-845F-52B98D3F93FB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Windows.TVTuga.Admin</RootNamespace>
+    <AssemblyName>Windows.TVTuga.Admin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLASSES\DASHBOARD\CONTAS_WEB\WEBSITES\CLS_GERIR_WEBSITES.cs" />
+    <Compile Include="CLASSES\DB_CONNECTION\CLS_DB_CONNECTION.cs" />
+    <Compile Include="CLASSES\DB_FUNCTIONS\CLS_DB_FUNCTIONS.cs" />
+    <Compile Include="CLASSES\ENCRIPTACAO\CLS_ENCRYPT.cs" />
+    <Compile Include="FORMS\DASHBOARD\FRM_DASHBOARD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\FRM_DASHBOARD.Designer.cs">
+      <DependentUpon>FRM_DASHBOARD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\CONTAS_WEB\PNL_GERIR_CONTAS_WEB_ADICIONAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\CONTAS_WEB\PNL_GERIR_CONTAS_WEB_ADICIONAR.Designer.cs">
+      <DependentUpon>PNL_GERIR_CONTAS_WEB_ADICIONAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\CONTAS_WEB\PNL_GERIR_CONTAS_WEB_LISTAGEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\CONTAS_WEB\PNL_GERIR_CONTAS_WEB_LISTAGEM.Designer.cs">
+      <DependentUpon>PNL_GERIR_CONTAS_WEB_LISTAGEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\PNL_CONTAS_WEB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\PNL_CONTAS_WEB.Designer.cs">
+      <DependentUpon>PNL_CONTAS_WEB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\CONTAS_WEB\PNL_GERIR_CONTAS_WEB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\CONTAS_WEB\PNL_GERIR_CONTAS_WEB.Designer.cs">
+      <DependentUpon>PNL_GERIR_CONTAS_WEB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\WEBSITES\PNL_GERIR_WEBSITES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\WEBSITES\PNL_GERIR_WEBSITES.Designer.cs">
+      <DependentUpon>PNL_GERIR_WEBSITES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\WEBSITES\PNL_GERIR_WEBSITES_ADICIONAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\WEBSITES\PNL_GERIR_WEBSITES_ADICIONAR.Designer.cs">
+      <DependentUpon>PNL_GERIR_WEBSITES_ADICIONAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\WEBSITES\PNL_GERIR_WEBSITES_ADICIONAR_TIPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\WEBSITES\PNL_GERIR_WEBSITES_ADICIONAR_TIPO.Designer.cs">
+      <DependentUpon>PNL_GERIR_WEBSITES_ADICIONAR_TIPO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\WEBSITES\PNL_GERIR_WEBSITES_LISTAGEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\WEBSITES\PNL_GERIR_WEBSITES_LISTAGEM.Designer.cs">
+      <DependentUpon>PNL_GERIR_WEBSITES_LISTAGEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\DASHBOARD\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\DASHBOARD\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\DASHBOARD\PNL_DASHBOARD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\DASHBOARD\PNL_DASHBOARD.Designer.cs">
+      <DependentUpon>PNL_DASHBOARD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\PEDIDOS\PNL_GERIR_PEDIDOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\PEDIDOS\PNL_GERIR_PEDIDOS.Designer.cs">
+      <DependentUpon>PNL_GERIR_PEDIDOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\PEDIDOS\PNL_GERIR_PEDIDOS_LISTAGEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\PEDIDOS\PNL_GERIR_PEDIDOS_LISTAGEM.Designer.cs">
+      <DependentUpon>PNL_GERIR_PEDIDOS_LISTAGEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\CATEGORIAS\PNL_GERIR_CATEGORIAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\CATEGORIAS\PNL_GERIR_CATEGORIAS.Designer.cs">
+      <DependentUpon>PNL_GERIR_CATEGORIAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\CATEGORIAS\PNL_GERIR_CATEGORIAS_LISTAGEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\CATEGORIAS\PNL_GERIR_CATEGORIAS_LISTAGEM.Designer.cs">
+      <DependentUpon>PNL_GERIR_CATEGORIAS_LISTAGEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\EPISODIOS\PNL_GERIR_EPISODIOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\EPISODIOS\PNL_GERIR_EPISODIOS.Designer.cs">
+      <DependentUpon>PNL_GERIR_EPISODIOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\EPISODIOS\PNL_GERIR_EPISODIOS_ADICIONAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\EPISODIOS\PNL_GERIR_EPISODIOS_ADICIONAR.Designer.cs">
+      <DependentUpon>PNL_GERIR_EPISODIOS_ADICIONAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\EPISODIOS\PNL_GERIR_EPISODIOS_LISTAGEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\EPISODIOS\PNL_GERIR_EPISODIOS_LISTAGEM.Designer.cs">
+      <DependentUpon>PNL_GERIR_EPISODIOS_LISTAGEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\PNL_SERIES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\PNL_SERIES.Designer.cs">
+      <DependentUpon>PNL_SERIES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\REPORTADO\PNL_GERIR_REPORTADOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\REPORTADO\PNL_GERIR_REPORTADOS.Designer.cs">
+      <DependentUpon>PNL_GERIR_REPORTADOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\REPORTADO\PNL_GERIR_REPORTADOS_LISTAGEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\REPORTADO\PNL_GERIR_REPORTADOS_LISTAGEM.Designer.cs">
+      <DependentUpon>PNL_GERIR_REPORTADOS_LISTAGEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\SERIES\PNL_GERIR_SERIES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\SERIES\PNL_GERIR_SERIES.Designer.cs">
+      <DependentUpon>PNL_GERIR_SERIES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\SERIES\PNL_GERIR_SERIES_ADICIONAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\SERIES\PNL_GERIR_SERIES_ADICIONAR.Designer.cs">
+      <DependentUpon>PNL_GERIR_SERIES_ADICIONAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\SERIES\PNL_GERIR_SERIES_LISTAGEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\SERIES\SERIES\PNL_GERIR_SERIES_LISTAGEM.Designer.cs">
+      <DependentUpon>PNL_GERIR_SERIES_LISTAGEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\UTILIZADORES\PNL_UTILIZADORES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\UTILIZADORES\PNL_UTILIZADORES.Designer.cs">
+      <DependentUpon>PNL_UTILIZADORES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\UTILIZADORES\UTILIZADORES\PNL_GERIR_UTILIZADORES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\UTILIZADORES\UTILIZADORES\PNL_GERIR_UTILIZADORES.Designer.cs">
+      <DependentUpon>PNL_GERIR_UTILIZADORES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\UTILIZADORES\UTILIZADORES\PNL_GERIR_UTILIZADORES_EMAILS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\UTILIZADORES\UTILIZADORES\PNL_GERIR_UTILIZADORES_EMAILS.Designer.cs">
+      <DependentUpon>PNL_GERIR_UTILIZADORES_EMAILS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\UTILIZADORES\UTILIZADORES\PNL_GERIR_UTILIZADORES_EMAILS_ENVIAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\UTILIZADORES\UTILIZADORES\PNL_GERIR_UTILIZADORES_EMAILS_ENVIAR.Designer.cs">
+      <DependentUpon>PNL_GERIR_UTILIZADORES_EMAILS_ENVIAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\UTILIZADORES\UTILIZADORES\PNL_GERIR_UTILIZADORES_LISTAGEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DASHBOARD\PANELS\UTILIZADORES\UTILIZADORES\PNL_GERIR_UTILIZADORES_LISTAGEM.Designer.cs">
+      <DependentUpon>PNL_GERIR_UTILIZADORES_LISTAGEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\LOGIN\FRM_INICIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\LOGIN\FRM_INICIO.Designer.cs">
+      <DependentUpon>FRM_INICIO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\FRM_OPCOES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\FRM_OPCOES.Designer.cs">
+      <DependentUpon>FRM_OPCOES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\BD\BDS\PNL_OPCOES_BD_BDS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\BD\BDS\PNL_OPCOES_BD_BDS.Designer.cs">
+      <DependentUpon>PNL_OPCOES_BD_BDS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\BD\CONTAS\CLS_OPCOES_BD.cs" />
+    <Compile Include="FORMS\OPCOES\PANELS\BD\CONTAS\PNL_OPCOES_BD_ADICIONAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\BD\CONTAS\PNL_OPCOES_BD_ADICIONAR.Designer.cs">
+      <DependentUpon>PNL_OPCOES_BD_ADICIONAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\BD\CONTAS\PNL_OPCOES_BD_CONTAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\BD\CONTAS\PNL_OPCOES_BD_CONTAS.Designer.cs">
+      <DependentUpon>PNL_OPCOES_BD_CONTAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\BD\OPCOES\PNL_OPCOES_OPCOES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\BD\OPCOES\PNL_OPCOES_OPCOES.Designer.cs">
+      <DependentUpon>PNL_OPCOES_OPCOES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\BD\TABELAS\PNL_OPCOES_BD_TABELAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\BD\TABELAS\PNL_OPCOES_BD_TABELAS.Designer.cs">
+      <DependentUpon>PNL_OPCOES_BD_TABELAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\FTP\PNL_OPCOES_FTP_ADICIONAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\FTP\PNL_OPCOES_FTP_ADICIONAR.Designer.cs">
+      <DependentUpon>PNL_OPCOES_FTP_ADICIONAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\FTP\PNL_OPCOES_FTP_ALTERAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\FTP\PNL_OPCOES_FTP_ALTERAR.Designer.cs">
+      <DependentUpon>PNL_OPCOES_FTP_ALTERAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\FTP\PNL_OPCOES_FTP_CONTAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\FTP\PNL_OPCOES_FTP_CONTAS.Designer.cs">
+      <DependentUpon>PNL_OPCOES_FTP_CONTAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\FTP\PNL_OPCOES_FTP_REMOVER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\FTP\PNL_OPCOES_FTP_REMOVER.Designer.cs">
+      <DependentUpon>PNL_OPCOES_FTP_REMOVER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\PNL_OPCOES_BD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\PNL_OPCOES_BD.Designer.cs">
+      <DependentUpon>PNL_OPCOES_BD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\UTILIZADOR\CLASSES\CLS_OBTER_CONTAS.cs" />
+    <Compile Include="FORMS\OPCOES\PANELS\UTILIZADOR\PNL_OPCOES_UTILIZADOR_ADICIONAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\UTILIZADOR\PNL_OPCOES_UTILIZADOR_ADICIONAR.Designer.cs">
+      <DependentUpon>PNL_OPCOES_UTILIZADOR_ADICIONAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\UTILIZADOR\PNL_OPCOES_UTILIZADOR_ALTERAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\UTILIZADOR\PNL_OPCOES_UTILIZADOR_ALTERAR.Designer.cs">
+      <DependentUpon>PNL_OPCOES_UTILIZADOR_ALTERAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\UTILIZADOR\PNL_OPCOES_UTILIZADOR_CONTAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\UTILIZADOR\PNL_OPCOES_UTILIZADOR_CONTAS.Designer.cs">
+      <DependentUpon>PNL_OPCOES_UTILIZADOR_CONTAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\UTILIZADOR\PNL_OPCOES_UTILIZADOR_REMOVER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\UTILIZADOR\PNL_OPCOES_UTILIZADOR_REMOVER.Designer.cs">
+      <DependentUpon>PNL_OPCOES_UTILIZADOR_REMOVER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\PNL_OPCOES_FTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\PNL_OPCOES_FTP.Designer.cs">
+      <DependentUpon>PNL_OPCOES_FTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\PNL_OPCOES_UTILIZADOR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\PNL_OPCOES_UTILIZADOR.Designer.cs">
+      <DependentUpon>PNL_OPCOES_UTILIZADOR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\_EXEMPLOS\PNL_OPCOES_EXEMPLO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\_EXEMPLOS\PNL_OPCOES_EXEMPLO.Designer.cs" />
+    <Compile Include="FORMS\OPCOES\PANELS\_EXEMPLOS\PNL_OPCOES_OPCAO_EXEMPLO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\OPCOES\PANELS\_EXEMPLOS\PNL_OPCOES_OPCAO_EXEMPLO.Designer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FORMS\DASHBOARD\FRM_DASHBOARD.resx">
+      <DependentUpon>FRM_DASHBOARD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\CONTAS_WEB\PNL_GERIR_CONTAS_WEB_ADICIONAR.resx">
+      <DependentUpon>PNL_GERIR_CONTAS_WEB_ADICIONAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\CONTAS_WEB\PNL_GERIR_CONTAS_WEB_LISTAGEM.resx">
+      <DependentUpon>PNL_GERIR_CONTAS_WEB_LISTAGEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\PNL_CONTAS_WEB.resx">
+      <DependentUpon>PNL_CONTAS_WEB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\CONTAS_WEB\PNL_GERIR_CONTAS_WEB.resx">
+      <DependentUpon>PNL_GERIR_CONTAS_WEB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\WEBSITES\PNL_GERIR_WEBSITES.resx">
+      <DependentUpon>PNL_GERIR_WEBSITES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\WEBSITES\PNL_GERIR_WEBSITES_ADICIONAR.resx">
+      <DependentUpon>PNL_GERIR_WEBSITES_ADICIONAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\WEBSITES\PNL_GERIR_WEBSITES_ADICIONAR_TIPO.resx">
+      <DependentUpon>PNL_GERIR_WEBSITES_ADICIONAR_TIPO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\CONTAS_WEB\WEBSITES\PNL_GERIR_WEBSITES_LISTAGEM.resx">
+      <DependentUpon>PNL_GERIR_WEBSITES_LISTAGEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\DASHBOARD\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\DASHBOARD\PNL_DASHBOARD.resx">
+      <DependentUpon>PNL_DASHBOARD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\PEDIDOS\PNL_GERIR_PEDIDOS.resx">
+      <DependentUpon>PNL_GERIR_PEDIDOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\PEDIDOS\PNL_GERIR_PEDIDOS_LISTAGEM.resx">
+      <DependentUpon>PNL_GERIR_PEDIDOS_LISTAGEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\SERIES\CATEGORIAS\PNL_GERIR_CATEGORIAS.resx">
+      <DependentUpon>PNL_GERIR_CATEGORIAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\SERIES\CATEGORIAS\PNL_GERIR_CATEGORIAS_LISTAGEM.resx">
+      <DependentUpon>PNL_GERIR_CATEGORIAS_LISTAGEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\SERIES\EPISODIOS\PNL_GERIR_EPISODIOS.resx">
+      <DependentUpon>PNL_GERIR_EPISODIOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\SERIES\EPISODIOS\PNL_GERIR_EPISODIOS_ADICIONAR.resx">
+      <DependentUpon>PNL_GERIR_EPISODIOS_ADICIONAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\SERIES\EPISODIOS\PNL_GERIR_EPISODIOS_LISTAGEM.resx">
+      <DependentUpon>PNL_GERIR_EPISODIOS_LISTAGEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\SERIES\PNL_SERIES.resx">
+      <DependentUpon>PNL_SERIES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\SERIES\REPORTADO\PNL_GERIR_REPORTADOS.resx">
+      <DependentUpon>PNL_GERIR_REPORTADOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\SERIES\REPORTADO\PNL_GERIR_REPORTADOS_LISTAGEM.resx">
+      <DependentUpon>PNL_GERIR_REPORTADOS_LISTAGEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\SERIES\SERIES\PNL_GERIR_SERIES.resx">
+      <DependentUpon>PNL_GERIR_SERIES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\SERIES\SERIES\PNL_GERIR_SERIES_ADICIONAR.resx">
+      <DependentUpon>PNL_GERIR_SERIES_ADICIONAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\SERIES\SERIES\PNL_GERIR_SERIES_LISTAGEM.resx">
+      <DependentUpon>PNL_GERIR_SERIES_LISTAGEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\UTILIZADORES\PNL_UTILIZADORES.resx">
+      <DependentUpon>PNL_UTILIZADORES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\UTILIZADORES\UTILIZADORES\PNL_GERIR_UTILIZADORES.resx">
+      <DependentUpon>PNL_GERIR_UTILIZADORES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\UTILIZADORES\UTILIZADORES\PNL_GERIR_UTILIZADORES_EMAILS.resx">
+      <DependentUpon>PNL_GERIR_UTILIZADORES_EMAILS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\UTILIZADORES\UTILIZADORES\PNL_GERIR_UTILIZADORES_EMAILS_ENVIAR.resx">
+      <DependentUpon>PNL_GERIR_UTILIZADORES_EMAILS_ENVIAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DASHBOARD\PANELS\UTILIZADORES\UTILIZADORES\PNL_GERIR_UTILIZADORES_LISTAGEM.resx">
+      <DependentUpon>PNL_GERIR_UTILIZADORES_LISTAGEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\LOGIN\FRM_INICIO.resx">
+      <DependentUpon>FRM_INICIO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\OPCOES\FRM_OPCOES.resx">
+      <DependentUpon>FRM_OPCOES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\OPCOES\PANELS\BD\BDS\PNL_OPCOES_BD_BDS.resx">
+      <DependentUpon>PNL_OPCOES_BD_BDS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\OPCOES\PANELS\BD\CONTAS\PNL_OPCOES_BD_ADICIONAR.resx">
+      <DependentUpon>PNL_OPCOES_BD_ADICIONAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\OPCOES\PANELS\BD\CONTAS\PNL_OPCOES_BD_CONTAS.resx">
+      <DependentUpon>PNL_OPCOES_BD_CONTAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\OPCOES\PANELS\BD\OPCOES\PNL_OPCOES_OPCOES.resx">
+      <DependentUpon>PNL_OPCOES_OPCOES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\OPCOES\PANELS\BD\TABELAS\PNL_OPCOES_BD_TABELAS.resx">
+      <DependentUpon>PNL_OPCOES_BD_TABELAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\OPCOES\PANELS\FTP\PNL_OPCOES_FTP_ADICIONAR.resx">
+      <DependentUpon>PNL_OPCOES_FTP_ADICIONAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\OPCOES\PANELS\FTP\PNL_OPCOES_FTP_ALTERAR.resx">
+      <DependentUpon>PNL_OPCOES_FTP_ALTERAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\OPCOES\PANELS\FTP\PNL_OPCOES_FTP_CONTAS.resx">
+      <DependentUpon>PNL_OPCOES_FTP_CONTAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\OPCOES\PANELS\FTP\PNL_OPCOES_FTP_REMOVER.resx">
+      <DependentUpon>PNL_OPCOES_FTP_REMOVER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\OPCOES\PANELS\PNL_OPCOES_BD.resx">
+      <DependentUpon>PNL_OPCOES_BD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\OPCOES\PANELS\PNL_OPCOES_FTP.resx">
+      <DependentUpon>PNL_OPCOES_FTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\OPCOES\PANELS\UTILIZADOR\PNL_OPCOES_UTILIZADOR_ADICIONAR.resx">
+      <DependentUpon>PNL_OPCOES_UTILIZADOR_ADICIONAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\OPCOES\PANELS\UTILIZADOR\PNL_OPCOES_UTILIZADOR_ALTERAR.resx">
+      <DependentUpon>PNL_OPCOES_UTILIZADOR_ALTERAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\OPCOES\PANELS\UTILIZADOR\PNL_OPCOES_UTILIZADOR_CONTAS.resx">
+      <DependentUpon>PNL_OPCOES_UTILIZADOR_CONTAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\OPCOES\PANELS\UTILIZADOR\PNL_OPCOES_UTILIZADOR_REMOVER.resx">
+      <DependentUpon>PNL_OPCOES_UTILIZADOR_REMOVER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\OPCOES\PANELS\PNL_OPCOES_UTILIZADOR.resx">
+      <DependentUpon>PNL_OPCOES_UTILIZADOR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\OPCOES\PANELS\_EXEMPLOS\PNL_OPCOES_EXEMPLO.resx" />
+    <EmbeddedResource Include="FORMS\OPCOES\PANELS\_EXEMPLOS\PNL_OPCOES_OPCAO_EXEMPLO.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CLASSES\DASHBOARD\CONFIGURACOES\" />
+    <Folder Include="CLASSES\DASHBOARD\CONTAS_WEB\CONTAS\" />
+    <Folder Include="CLASSES\DASHBOARD\DASHBOARD\" />
+    <Folder Include="CLASSES\DASHBOARD\PEDIDOS\" />
+    <Folder Include="CLASSES\DASHBOARD\SERIES\CATEGORIAS\" />
+    <Folder Include="CLASSES\DASHBOARD\SERIES\EPISODIOS\" />
+    <Folder Include="CLASSES\DASHBOARD\SERIES\REPORTADO\" />
+    <Folder Include="CLASSES\DASHBOARD\SERIES\SERIES\" />
+    <Folder Include="CLASSES\DASHBOARD\UTILIZADORES\" />
+    <Folder Include="FORMS\DASHBOARD\PANELS\CONFIGURACOES\" />
+    <Folder Include="FORMS\LOGIN\PANELS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DOCS\MEDIDAS_PANELS.txt" />
+    <Content Include="DOCS\OPCOES.txt" />
+    <None Include="Resources\trash-o_000000_50.png" />
+    <None Include="Resources\wrench_000000_50.png" />
+    <None Include="Resources\picture-o_000000_50.png" />
+    <None Include="Resources\paper-plane-o_000000_50.png" />
+    <None Include="Resources\envelope-o_000000_50.png" />
+    <None Include="Resources\check-circle-o_000000_50.png" />
+    <None Include="Resources\refresh_000000_501.png" />
+    <None Include="Resources\pencil-square-o_000000_50.png" />
+    <None Include="Resources\minus-square-o_000000_50.png" />
+    <None Include="Resources\plus-square-o_000000_50.png" />
+    <None Include="Resources\bars_000000_50.png" />
+    <None Include="Resources\refresh_000000_50.png" />
+    <None Include="Resources\globe_000000_50.png" />
+    <None Include="Resources\users_000000_501.png" />
+    <None Include="Resources\medkit_000000_50.png" />
+    <None Include="Resources\cogs_000000_501.png" />
+    <None Include="Resources\pie-chart_000000_50.png" />
+    <None Include="Resources\desktop_000000_50.png" />
+    <None Include="Resources\cogs_000000_50.png" />
+    <None Include="Resources\heart_000000_50.png" />
+    <None Include="Resources\video-camera_000000_50.png" />
+    <None Include="Resources\users_000000_50.png" />
+    <None Include="Resources\book_000000_50.png" />
+    <None Include="Resources\tachometer_000000_50.png" />
+    <None Include="Resources\database_001e4a_50.png" />
+    <None Include="Resources\Icon-check.png" />
+    <None Include="Resources\Previous %28Custom%29.png" />
+    <None Include="Resources\Next-icon %28Custom%29.png" />
+    <None Include="Resources\LoginIcon %28Custom%29.png" />
+    <None Include="Resources\key-icon %28Custom%29 %282%29.png" />
+    <None Include="Resources\key-icon %28Custom%29.png" />
+    <None Include="Resources\Add %28Custom%29 %285%29.png" />
+    <None Include="Resources\Settings-icon %28Custom%29.png" />
+    <None Include="Resources\table_green_48 %28Custom%29.png" />
+    <None Include="Resources\document_save %28Custom%29.png" />
+    <None Include="Resources\Delete %28Custom%29 %282%29.png" />
+    <None Include="Resources\-trash %28Custom%29.png" />
+    <None Include="Resources\Trash %28Custom%29.png" />
+    <None Include="Resources\Yes_check %28Custom%29 %282%29.png" />
+    <None Include="Resources\Yes_check %28Custom%29.png" />
+    <None Include="Resources\Icon-check %28Custom%29 %284%29.png" />
+    <None Include="Resources\Icon-check %28Custom%29 %283%29.png" />
+    <None Include="Resources\Icon-check %28Custom%29 %282%29.png" />
+    <None Include="Resources\Icon-check %28Custom%29.png" />
+    <None Include="Resources\eye_watch %28Custom%29 %284%29.png" />
+    <None Include="Resources\eye_watch %28Custom%29 %283%29.png" />
+    <None Include="Resources\eye_watch %28Custom%29 %282%29.png" />
+    <None Include="Resources\eye_watch %28Custom%29.png" />
+    <None Include="Resources\database %28Custom%29.png" />
+    <None Include="Resources\120px-Human-folder-remote-ftp.svg %28Custom%29.png" />
+    <None Include="Resources\user1 %28Custom%29.png" />
+    <None Include="Resources\Refresh-icon %28Custom%29.png" />
+    <None Include="Resources\Users 2 %28Custom%29.png" />
+    <None Include="Resources\Edit %28Custom%29.png" />
+    <None Include="Resources\Delete %28Custom%29.png" />
+    <None Include="Resources\Add %28Custom%29 %284%29.png" />
+    <None Include="Resources\Add %28Custom%29 %283%29.png" />
+    <None Include="Resources\Add %28Custom%29 %282%29.png" />
+    <None Include="Resources\Add %28Custom%29.png" />
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

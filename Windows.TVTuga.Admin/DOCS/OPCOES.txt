@@ -1,0 +1,18 @@
+﻿Utilizador:
+	Nome
+	Username
+	Password
+
+FTP:
+	Username
+	Password
+	Protocolo
+	Porta
+
+BD:
+	Username
+	Password
+	Porta
+	Base de Dados:
+		Nome
+		Tabelas:
